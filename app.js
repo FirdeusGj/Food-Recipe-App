@@ -1,5 +1,5 @@
 
-const ul = document.querySelector('.ul')
+const ul = document.querySelector('.meal__ul')
 const input = document.querySelector('input')
 
 input.addEventListener('keyup', function(event){
@@ -17,13 +17,18 @@ function search(){
           .then((response) => response.json())
           .then((data) => {
             let meal = data.meals
-            if(!meal){
+            if(!meal || inputText === ''){
                 ul.innerHTML = `<h1>No meals available</h1>`;
                 return
             }
             ul.innerHTML = meal.map(elem => `
-            <li>
+            <li class="meal__li">
+            <img src="${elem.strMealThumb}"/>
                 <p>${elem.strMeal}</p>
+                <p>Area : ${elem.strArea}</p>
+                <h3>Ingredient :</h3>
+                <p>${elem.strIngredient1}, ${elem.strIngredient2}</p>
             </li>`).join('')
+            console.log(meal)
         })
 }
