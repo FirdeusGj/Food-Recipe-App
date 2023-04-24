@@ -27,7 +27,9 @@ function search(){
                 <p>${elem.strMeal}</p>
                 <p>Area : ${elem.strArea}</p>
                 <h3>Ingredient :</h3>
-                <p>${elem.strIngredient1}, ${elem.strIngredient2}</p>
+                <ul>
+                    <li>${elem.strInstructions}</li>
+                </ul>
             </li>`).join('')
             console.log(meal)
         })
