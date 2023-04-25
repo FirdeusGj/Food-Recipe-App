@@ -26,7 +26,29 @@ function search(){
             <img src="${elem.strMealThumb}"/>
                 <p>${elem.strMeal}</p>
                 <p>Area : ${elem.strArea}</p>
-                <h3>Ingredient :</h3>
+                <h3>Ingredients :</h3>
+                <div>
+                    <span>${elem.strIngredient1}</span>
+                    <span>${elem.strIngredient2}</span>
+                    <span>${elem.strIngredient3}</span>
+                    <span>${elem.strIngredient4}</span>
+                    <span>${elem.strIngredient5}</span>
+                    <span>${elem.strIngredient6}</span>
+                    <span>${elem.strIngredient7}</span>
+                    <span>${elem.strIngredient8}</span>
+                    <span>${elem.strIngredient9}</span>
+                    <span>${elem.strIngredient10}</span>
+                    <span>${elem.strIngredient11}</span>
+                    <span>${elem.strIngredient12}</span>
+                    <span>${elem.strIngredient13}</span>
+                    <span>${elem.strIngredient14}</span>
+                    <span>${elem.strIngredient15}</span>
+                    <span>${elem.strIngredient16}</span>
+                    <span>${elem.strIngredient17}</span>
+                    <span>${elem.strIngredient18}</span>
+                    <span>${elem.strIngredient19}</span>
+                    <span>${elem.strIngredient20}</span>
+                </div>
                 <ul>
                     <li>${elem.strInstructions}</li>
                 </ul>
