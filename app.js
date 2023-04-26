@@ -49,9 +49,13 @@ function search(){
                     <span>${elem.strIngredient19}</span>
                     <span>${elem.strIngredient20}</span>
                 </div>
-                <ul>
-                    <li>${elem.strInstructions}</li>
-                </ul>
+                <div>
+                    <p>${elem.strInstructions}</p>
+                </div>
+                <div>
+                    <a href="${elem.strYoutube}" target="_blank">Youtube Video</a>
+                    <a href="${elem.strSource}" target="_blank">Food Source</a>
+                </div>
             </li>`).join('')
             console.log(meal)
         })
