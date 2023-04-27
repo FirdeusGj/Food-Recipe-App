@@ -56,6 +56,11 @@ function search(){
                     <a href="${elem.strYoutube}" target="_blank">Youtube Video</a>
                     <a href="${elem.strSource}" target="_blank">Food Source</a>
                 </div>
+                <div>
+                    <button> 
+                    See Recipe
+                    </button>
+                </div>
             </li>`).join('')
             console.log(meal)
         })
