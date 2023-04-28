@@ -9,10 +9,42 @@
     <link rel="stylesheet" href="styles.css">
   </head>
   <body>
-    <input type="text" placeholder="Enter Text" onchange="inputChange(event)" />
-    <button onclick="search()">Search</button>
-    <ul class="meal__ul">
+    <header class="header">
+      <div class="header__wrapper">
+        <ul class="header__ul">
+          <li>
+            <img class="food__icon" src="https://cdn-icons-png.flaticon.com/512/2771/2771401.png">
+          </li>
+          <li>
+            <h1 class="header__title">Search for any food</h1>
+          </li>
+          <li>
+            <img class="food__icon reverse" src="https://cdn-icons-png.flaticon.com/512/2771/2771401.png">
+          </li>
+        </ul>
+      </div>
+    </header>
+    <section>
+      <div>
+        <h2>What the search includes : </h2>
+        <p>The searched food along with the other similar ones</p>
+        <p>Every Ingredient it needs</p>
+        <p>Instruction about the food</p>
+        <p>Youtube video</p>
+        <p>The source of the food</p>
+      </div>
+    </section>
+    <section>
+      <div>
+        <input type="text" placeholder="Enter Text" onchange="inputChange(event)" />
+        <button onclick="search()">Search</button>
+      </div>
+      <div>
+        <ul class="meal__ul"></ul>
+      </div>
+    </section>
+    <footer>
 
-    </ul>
+    </footer>
   </body>
 </html>
