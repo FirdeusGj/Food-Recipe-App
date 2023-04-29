@@ -36,7 +36,7 @@ img{
     font-family: 'Bruno Ace SC', cursive;
     font-size: 50px;
 }
-.header{
+.nav{
     background:linear-gradient(#A4D0A4 95%, #F7E1AE);
     box-shadow: 0 1px 10px rgba(0, 0, 0, 0.384);
     max-height: 104px;
@@ -46,6 +46,9 @@ img{
     transform: scaleX(-1);
 }
 svg{
+    height:23px;
+}
+.section__svg{
     height:34px;
     width:34px;
     border:1px solid #617A55;
@@ -53,9 +56,6 @@ svg{
     padding: 4px;
     border-radius: 4px;
     box-shadow: 0 0 1px 1px #617A55;
-}
-.section__para--wrapper{
-
 }
 .section__para{
     display: inline;
@@ -66,12 +66,51 @@ svg{
     display: flex;
 }
 .section1{
-    background-color: #F7E1AE;
+    background:linear-gradient(#F7E1AE 95%, #FFF8D6);
     display: flex;
     align-items: center;
     justify-content: center;
     padding: 20px 0;
+    height:50vh;
 }
 .section__h2{
     font-size: 35px;
+}
+.section2{
+    background:linear-gradient(#FFF8D6 95%, transparent);
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+}
+.input__wrapper{
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    border:2px solid black;
+    width:50%;
+    max-width: 600px;
+    border-radius: 30px;
+    overflow: hidden;
+    margin: 0 auto;
+    margin: 50px 0;
+}
+.input{
+    font-size: 20px;
+    display: flex;
+    max-width: 1500px;
+    width:100%;
+    border:none;
+    padding:10px;
+}
+.input:focus{
+    outline: none;
+}
+.input__button{
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    padding: 11px;
+    border:none;
+    background-color: #617A55;
+    cursor:pointer;
 }
