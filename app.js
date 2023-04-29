@@ -1,31 +1,37 @@
+const ul = document.querySelector(".meal__ul");
+const input = document.querySelector("input");
 
-const ul = document.querySelector('.meal__ul')
-const input = document.querySelector('input')
+input.addEventListener("keyup", function (event) {
+  if (event.keyCode === 13) {
+    search();
+  }
+});
+let inputText = "";
 
-input.addEventListener('keyup', function(event){
-    if(event.keyCode === 13){
-        search()
-    }
-})
-let inputText = ''
-
-function inputChange(event){
-    inputText = event.target.value
+function inputChange(event) {
+  inputText = event.target.value;
 }
-function search(){
-    fetch(`https://www.themealdb.com/api/json/v1/1/search.php?s=${inputText}`)
-          .then((response) => response.json())
-          .then((data) => {
-            let meal = data.meals
-            if(!meal || inputText === ''){
-                ul.innerHTML = `<h1>No meals available</h1>`;
-                return
-            }
-            ul.innerHTML = meal.map(elem => `
+function search() {
+  fetch(`https://www.themealdb.com/api/json/v1/1/search.php?s=${inputText}`)
+    .then((response) => response.json())
+    .then((data) => {
+      let meal = data.meals;
+      if (!meal || inputText === "") {
+        ul.innerHTML = `<h1>No meals available</h1>`;
+        return;
+      }
+      ul.innerHTML = meal
+        .map(
+          (elem) => `
             <li class="meal__li">
+            <div>
+            <div class="meal__image--wrapper">
             <img src="${elem.strMealThumb}"/>
-                <p>${elem.strMeal}</p>
-                <p>Area : ${elem.strArea}</p>
+            </div>
+            <p>${elem.strMeal}</p>
+            <p>Area : ${elem.strArea}</p>
+            </div>
+                <div>
                 <h3>Ingredients :</h3>
                 <div>
                     <span>${elem.strIngredient1}</span>
@@ -49,6 +55,7 @@ function search(){
                     <span>${elem.strIngredient19}</span>
                     <span>${elem.strIngredient20}</span>
                 </div>
+                </div>
                 <div>
                     <p>${elem.strInstructions}</p>
                 </div>
@@ -58,10 +65,12 @@ function search(){
                 </div>
                 <div>
                     <button> 
-                    See Recipe
+                    View more ⮟
                     </button>
                 </div>
-            </li>`).join('')
-            console.log(meal)
-        })
+            </li>`
+        )
+        .join("");
+      console.log(meal);
+    });
 }
