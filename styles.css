@@ -23,7 +23,14 @@ ul{
     flex-direction: column;
 }
 .ingredients__wrapper{
-
+    border:1px solid black;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+span{
+    display: inline;
+    margin:0 3px;
 }
 .meals__wrapper{
     width:90%;
