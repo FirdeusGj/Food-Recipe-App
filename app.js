@@ -33,7 +33,7 @@ function search() {
             </div>
                 <div>
                 <h3>Ingredients :</h3>
-                <div>
+                <div class='ingredients__wrapper'>
                     <span>${elem.strIngredient1}</span>
                     <span>${elem.strIngredient2}</span>
                     <span>${elem.strIngredient3}</span>

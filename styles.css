@@ -11,12 +11,25 @@
 /* font-family: 'Roboto Condensed', sans-serif; */
 ul{
     list-style-type: none;
+    flex-wrap: wrap;
+    display: flex;
+    justify-content: center;
 }
 .meal__li{
+    width: calc(100% / 4);
     border:1px solid black;
+    margin:5px;
+    display: flex;
+    flex-direction: column;
+}
+.ingredients__wrapper{
+
+}
+.meals__wrapper{
+    width:90%;
 }
 img{
-    height:250px;
+    width: 100%;
 }
 .food__icon{
     height:100px;
@@ -45,8 +58,9 @@ img{
 .reverse{
     transform: scaleX(-1);
 }
-svg{
+.search__icon{
     height:23px;
+    fill:white;
 }
 .section__svg{
     height:34px;
@@ -86,13 +100,15 @@ svg{
     align-items: center;
     display: flex;
     justify-content: center;
-    border:2px solid black;
+    border:2px solid #617A55;
     width:50%;
     max-width: 600px;
-    border-radius: 30px;
+    min-width: 250px;
+    border-radius: 20px;
     overflow: hidden;
     margin: 0 auto;
     margin: 50px 0;
+    background-color: #617A55;
 }
 .input{
     font-size: 20px;
@@ -100,7 +116,8 @@ svg{
     max-width: 1500px;
     width:100%;
     border:none;
-    padding:10px;
+    padding:12px;
+    background: white;
 }
 .input:focus{
     outline: none;
@@ -109,7 +126,7 @@ svg{
     align-items: center;
     display: flex;
     justify-content: center;
-    padding: 11px;
+    padding: 12px;
     border:none;
     background-color: #617A55;
     cursor:pointer;
