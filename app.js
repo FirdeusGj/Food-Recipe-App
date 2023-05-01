@@ -12,23 +12,15 @@ function inputChange(event) {
 }
 function search() {
   fetch(`https://www.themealdb.com/api/json/v1/1/search.php?s=${inputText}`)
-  .then((response) => response.json())
-  .then((data) => {
-    let meal = data.meals;
-    if (!meal || inputText === "") {
-      ul.innerHTML = `<h1>No meals available</h1>`;
-      return;
-    }
-    console.log(meal)
-    // let MyIngredients = []
-    // meal.map(elem => {
-    //   MyIngredients = [elem.strIngredient1, elem.strIngredient2, elem.strIngredient3,elem.strIngredient4,elem.strIngredient5,elem.strIngredient6,elem.strIngredient7,elem.strIngredient8,elem.strIngredient9,elem.strIngredient10,elem.strIngredient11,elem.strIngredient12,elem.strIngredient13,elem.strIngredient14,elem.strIngredient15,elem.strIngredient16,elem.strIngredient17,elem.strIngredient18,elem.strIngredient19,elem.strIngredient20]
-    // })
-    // const Ingredients = MyIngredients.filter(filtered)
-    // function filtered(ingr){
-    //   return ingr.length > 0 
-    // }
-    ul.innerHTML = meal
+    .then((response) => response.json())
+    .then((data) => {
+      let meal = data.meals;
+      if (!meal || inputText === "") {
+        ul.innerHTML = `<h1>No meals available</h1>`;
+        return;
+      }
+      console.log(meal);
+      ul.innerHTML = meal
         .map(
           (elem) => `
             <li class="meal__li">
@@ -40,32 +32,50 @@ function search() {
             <p>Area : ${elem.strArea}</p>
             </div>
                 <div>
-                    <p>${elem.strInstructions}</p>
-                </div>
-                <div>
-                    <a href="${elem.strYoutube}" target="_blank">Youtube Video</a>
-                    <a href="${elem.strSource}" target="_blank">Food Source</a>
-                </div>
-                <div>
-                    <button onclick="toggleRecipe()"> 
+                    <button class="viewBtn" onclick="toggleRecipe();recipeDetail(${elem.idMeal})"> 
                     View more ⮟
                     </button>
                 </div>
-            </li>`
+            </li>
+            `
         )
         .join("");
     });
 }
-const mealDetails = document.querySelector('.meal__content--wrapper')
+
+const btn = document.querySelector(".viewBtn");
+
+const mealDetails = document.querySelector(".meal__content--wrapper");
 let recipeOpen = false;
-function toggleRecipe(){
-  if(recipeOpen){
-    recipeOpen = false
-    document.body.classList.remove('disableScroll')
-    return mealDetails.classList.remove('openRecipe')
+function recipeDetail(id) {
+  fetch(`https://www.themealdb.com/api/json/v1/1/lookup.php?i=${id}`)
+    .then((response) => response.json())
+    .then((data) => {
+      let myRecipe = data.meals[0];
+      console.log(myRecipe);
+      mealDetails.innerHTML = `<button class="recipe__btn" onclick="toggleRecipe()">x</button>
+          <h2 class="recipe__title">${myRecipe.strMeal}</h2>
+          <p class="recipe__category">${myRecipe.strCategory}</p>
+          <div class="recipe__meal--img">
+            <img src="${myRecipe.strMealThumb}">
+          </div>
+          <div class="recipe__instruction">
+            <h3>Instructions:</h3>
+            <p>${myRecipe.strInstructions}</p>
+          </div>
+          <div class="recipe__link">
+            <a href="${myRecipe.strYoutube}" target="_blank">Watch Vid ⏵</a>
+            <a href="${myRecipe.strSource}" target="_blank">Source</a>
+          </div>`
+    });
+}
+function toggleRecipe() {
+  if (recipeOpen) {
+    recipeOpen = false;
+    document.body.classList.remove("disableScroll");
+    return mealDetails.classList.remove("openRecipe");
   }
-  recipeOpen = true
-  mealDetails.classList += ' openRecipe'
-  document.body.classList += 'disableScroll'
-  // mealDetails.classList.add('openRecipe')
+  recipeOpen = true;
+  mealDetails.classList += " openRecipe";
+  document.body.classList += "disableScroll";
 }
