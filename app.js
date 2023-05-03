@@ -65,7 +65,7 @@ function recipeDetail(id) {
             <p>${myRecipe.strInstructions}</p>
           </div>
           <div class="recipe__link">
-            <a href="${myRecipe.strYoutube}" target="_blank">Watch Video ⏵</a>
+            <a href="${myRecipe.strYoutube}" target="_blank">Watch Youtube Video ⏵</a>
             <a href="${myRecipe.strSource}" target="_blank">Food Source</a>
           </div>`
     });
