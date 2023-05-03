@@ -12,14 +12,13 @@ function inputChange(event) {
 }
 function search() {
   fetch(`https://www.themealdb.com/api/json/v1/1/search.php?s=${inputText}`)
-    .then((response) => response.json())
-    .then((data) => {
-      let meal = data.meals;
+  .then((response) => response.json())
+  .then((data) => {
+    let meal = data.meals;
       if (!meal || inputText === "") {
         ul.innerHTML = `<h1>No meals available</h1>`;
         return;
       }
-      console.log(meal);
       ul.innerHTML = meal
         .map(
           (elem) => `
@@ -28,12 +27,14 @@ function search() {
             <div class="meal__image--wrapper">
             <img src="${elem.strMealThumb}"/>
             </div>
-            <p>${elem.strMeal}</p>
-            <p>Area : ${elem.strArea}</p>
+            <div class="recipe__title--wrapper">
+            <h1>${elem.strMeal}</h1>
+            <h3>Area : ${elem.strArea}</h3>
             </div>
-                <div>
+            </div>
+                <div class="button__wrapper">
                     <button class="viewBtn" onclick="toggleRecipe();recipeDetail(${elem.idMeal})"> 
-                    View more ⮟
+                    View Recipe
                     </button>
                 </div>
             </li>
