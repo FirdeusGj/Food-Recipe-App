@@ -289,3 +289,14 @@ span{
     justify-content: center;
     text-align: center;
 }
+.ingredient__wrapper{
+    display: flex;
+    justify-content: center;
+    max-width: 650px;
+    width:90%;
+    text-align: center;
+    margin-bottom:15px;
+}
+footer{
+    background-color: #A4D0A4;
+}
