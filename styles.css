@@ -106,7 +106,7 @@ span{
     font-size: 35px;
 }
 .section2{
-    background:linear-gradient(#FFF8D6 95%, transparent);
+    background:linear-gradient(#FFF8D6 80%, transparent);
     align-items: center;
     display: flex;
     flex-direction: column;
@@ -201,6 +201,8 @@ span{
 .recipe__title{
     text-decoration: underline;
     font-size: 30px;
+    width:90%;
+    text-align: center;
 }
 .recipe__category{
     font-size: 20px;
@@ -222,11 +224,8 @@ span{
     overflow: hidden;
     max-width: 500px;
     width:90%;
-    height:450px;
+    height: auto;
     margin: 20px 0;
-}
-.recipe__meal--img img{
-    width:500px;
 }
 .recipe__link{
     margin-top:10px;
@@ -297,6 +296,38 @@ span{
     text-align: center;
     margin-bottom:15px;
 }
+.ingredient{
+    width: 50%;
+}
+.measures{
+    width: 50%;
+}
 footer{
-    background-color: #A4D0A4;
+    background:linear-gradient(white 1%,#A4D0A4);
+    height:30vh;
+    display: flex;
+    justify-content: center;
+}
+footer img{
+    height:50px;
+}
+.footer__wrapper{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+@media (max-width: 763px){
+    .meal__li{
+        width: calc(100% / 2);
+        margin: 5px 0;
+        box-shadow: none;
+        border:1px solid #617A55;
+    }
+    .meals__wrapper{
+        width:85%;
+        padding: 30px;
+    }
+    .header__title{
+        font-size: 30px;
+    }
 }

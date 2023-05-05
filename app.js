@@ -62,9 +62,7 @@ function recipeDetail(id) {
         <div class="content__wrapper">
           <h2 class="recipe__title">${myRecipe.strMeal}</h2>
           <p class="recipe__category">${myRecipe.strCategory}</p>
-          <div class="recipe__meal--img">
-            <img src="${myRecipe.strMealThumb}">
-          </div>
+            <img class="recipe__meal--img" src="${myRecipe.strMealThumb}">
           <div class="ingredient__wrapper">
             <div class="ingredient">
               <h3>Ingredients:</h3>
