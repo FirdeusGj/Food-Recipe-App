@@ -6,29 +6,32 @@
     margin: 0;
     box-sizing: border-box;
     font-family: 'Roboto Condensed', sans-serif;
+    list-style-type: none;
 }
 /* font-family: 'Bruno Ace SC', cursive; */
 /* font-family: 'Roboto Condensed', sans-serif; */
-ul{
-    list-style-type: none;
+.meal__ul{
     flex-wrap: wrap;
     display: flex;
-    justify-content: center;
 }
 .meal__li{
-    width: calc(100% / 4);
-    margin:5px;
-    display: flex;
-    flex-direction: column;
-    padding: 3px;
+    padding: 0.5rem;
     background:radial-gradient(#f7e1ae72 60%,#F7E1AE);
-    border-radius: 30px;
+    border-radius: 1rem;
     overflow: hidden;
+    box-shadow: 0 0 0.5rem 0 #617A55;
+    display: flex;
     justify-content: space-between;
-    box-shadow: 0 0 10px 0 #617A55;
+    flex-direction: column;
+}
+.meal__li--wrapper{
+    display: flex;
+    justify-content: center;
+    width: calc(100% / 4);
+    padding:1rem;
 }
 .ingredients__wrapper{
-    border:1px solid black;
+    border:0.1rem solid black;
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
@@ -43,11 +46,11 @@ span{
 }
 .meal__li img{
     width: 100%;
-    border-top-right-radius:30px;
-    border-top-left-radius:30px;
+    border-top-right-radius:0.5rem;
+    border-top-left-radius:0.5rem;
 }
 .food__icon{
-    height:100px;
+    height:5rem;
 }
 .header__wrapper{
     align-items: center;
@@ -62,7 +65,7 @@ span{
 }
 .header__title{
     font-family: 'Bruno Ace SC', cursive;
-    font-size: 50px;
+    font-size: 3rem;
 }
 .nav{
     background:linear-gradient(#A4D0A4 95%, #F7E1AE);
@@ -317,17 +320,10 @@ footer img{
     align-items: center;
 }
 @media (max-width: 763px){
-    .meal__li{
-        width: calc(100% / 2);
-        margin: 5px 0;
-        box-shadow: none;
-        border:1px solid #617A55;
-    }
-    .meals__wrapper{
-        width:85%;
-        padding: 30px;
-    }
     .header__title{
         font-size: 30px;
+    }
+    .meal__li--wrapper{
+        width:50%;
     }
 }

@@ -22,22 +22,24 @@ function search() {
       ul.innerHTML = meal
         .map(
           (elem) => `
-            <li class="meal__li">
-            <div>
-            <div class="meal__image--wrapper">
-            <img src="${elem.strMealThumb}"/>
-            </div>
-            <div class="recipe__title--wrapper">
-            <h1>${elem.strMeal}</h1>
-            <h3>Area : ${elem.strArea}</h3>
-            </div>
-            </div>
+          <div class='meal__li--wrapper'>
+            <div class="meal__li">
+              <div>
+                <div class="meal__image--wrapper">
+                  <img src="${elem.strMealThumb}"/>
+                </div>
+                <div class="recipe__title--wrapper">
+                  <h1>${elem.strMeal}</h1>
+                  <h3>Area : ${elem.strArea}</h3>
+                </div>
+              </div>
                 <div class="button__wrapper">
                     <button class="viewBtn" onclick="toggleRecipe();recipeDetail(${elem.idMeal})"> 
                     View Recipe
                     </button>
                 </div>
-            </li>
+            </div>
+          </div>
             `
         )
         .join("");
