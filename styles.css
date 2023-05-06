@@ -70,8 +70,11 @@ span{
 .nav{
     background:linear-gradient(#A4D0A4 95%, #F7E1AE);
     box-shadow: 0 1px 10px rgba(0, 0, 0, 0.384);
-    max-height: 104px;
+    height: 15vh;
     overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 .reverse{
     transform: scaleX(-1);
@@ -81,8 +84,8 @@ span{
     fill:white;
 }
 .section__svg{
-    height:34px;
-    width:34px;
+    height:2.5rem;
+    width:2.5rem;
     border:1px solid #617A55;
     margin:2px;
     padding: 4px;
@@ -91,7 +94,7 @@ span{
 }
 .section__para{
     display: inline;
-    font-size: 25px;
+    font-size: 1.5rem;
 }
 .section__para--align{
     align-items: center;
@@ -106,7 +109,7 @@ span{
     height:50vh;
 }
 .section__h2{
-    font-size: 35px;
+    font-size: 2.5rem;
 }
 .section2{
     background:linear-gradient(#FFF8D6 80%, transparent);
@@ -120,12 +123,12 @@ span{
     justify-content: center;
     border:2px solid #617A55;
     width:50%;
-    max-width: 600px;
-    min-width: 250px;
+    max-width: 60rem;
+    min-width: 25rem;
     border-radius: 20px;
     overflow: hidden;
     margin: 0 auto;
-    margin: 50px 0;
+    margin: 4.5rem 0;
     background-color: #617A55;
 }
 .input{
@@ -165,7 +168,8 @@ span{
     -moz-border-radius: 1rem;
     -ms-border-radius: 1rem;
     -o-border-radius: 1rem;
-    width:70%;
+    width:90%;
+    max-width: 50rem;
     height:80%;
     overflow-y: scroll;
     padding:2rem 0;
@@ -307,12 +311,15 @@ span{
 }
 footer{
     background:linear-gradient(white 1%,#A4D0A4);
-    height:30vh;
+    height:20vh;
     display: flex;
     justify-content: center;
 }
 footer img{
-    height:50px;
+    height:4rem;
+}
+footer p{
+    font-size: 1.3rem;
 }
 .footer__wrapper{
     display: flex;
