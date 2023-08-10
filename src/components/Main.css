@@ -1,0 +1,13 @@
+.background{
+    background-position: center;
+    height: 450px;
+}
+.main{
+    height: 450px;
+    width: 100%;
+    background:linear-gradient(transparent, black) ,url('https://wallpaperaccess.com/full/462778.jpg');
+    background-size: cover;
+}
+.main__body{
+    color:white;
+}
