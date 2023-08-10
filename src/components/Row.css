@@ -1,0 +1,76 @@
+/* .foods-slide{
+    animation: 7s slide infinite linear;
+}
+.foods{
+    overflow: hidden;
+    white-space: nowrap;
+    display: flex;
+}
+@keyframes slide {
+    from{
+        transform: translateX(0);
+    }
+    to{ transform: translateX(-100%);}
+}
+.foods-slide img{
+    height: 200px;
+    margin: 0 20px;
+} */
+.row h2{
+    color:white;
+    font-size: 2rem;
+    padding: 10px 0;
+}
+/* .row{
+    background-color: black;
+} */
+.foods{
+    overflow: hidden;
+    position: relative;
+    padding: 10px 0 40px 0;
+    white-space: nowrap;
+}
+.foods-slide{
+    display: inline-block;
+    animation: 60s slide infinite linear;
+}
+@keyframes slide {
+    from{
+        transform: translateX(0);
+    }
+    to{ transform: translateX(-100%);}
+}
+.foods:hover .foods-slide{
+    animation-play-state: paused;
+}
+.foods:before{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 10%;
+    height: 100%;
+    background: linear-gradient(to left,transparent, black);
+    content: '';
+    z-index: 2;
+}
+.foods:after{
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 10%;
+    height: 100%;
+    background: linear-gradient(to right,transparent, black);
+    content: '';
+    z-index: 2;
+}
+.row__img{
+    cursor: pointer;
+    border-radius: 4px;
+    height: 200px;
+    margin: 0 10px;
+    box-shadow: 0 0 10px 0 white;
+    transition: all 200ms ease-in-out;
+}
+.row__img:hover{
+    transform: scale(1.05);
+}

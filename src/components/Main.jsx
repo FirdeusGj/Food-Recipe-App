@@ -1,16 +1,24 @@
 import React from "react";
 import "./Main.css";
+import Rows from "./Rows";
 
 export default function Main() {
   return (
+    <>
     <div className="main">
       <div className="main__body">
-        <div>
-        <h1>Foodify</h1>
-        <h3>Where every bite tells a story</h3>
-        <h5>Foodify is your premier Food Search Engine in which you can discover the recipes you crave, effortlessly.</h5>
+        <div className="main__text">
+          <h1>Foodify</h1>
+          <h3>Where every <span className="stroke">bite</span> tells a story.</h3>
+          <h5>
+            <span className="stroke">Your</span> premier Food Search
+            Engine in which you <br/>can discover the recipes you crave,
+            <br/><span className="stroke">Effortlessly</span>.
+          </h5>
         </div>
       </div>
     </div>
+    <Rows/>
+    </>
   );
 }
