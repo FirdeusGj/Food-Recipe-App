@@ -15,6 +15,7 @@ export default function Rows() {
       <Row title="Pork" fetchUrl={requests.fetchPork} />
       <Row title="Seafood" fetchUrl={requests.fetchSeafood} />
       <Row title="Vegetarian" fetchUrl={requests.fetchVegetarian} />
+      <Row title="Miscellaneous" fetchUrl={requests.fetchMiscellaneous} />
     </div>
   );
 }

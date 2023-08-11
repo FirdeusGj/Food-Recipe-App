@@ -1,10 +1,12 @@
 import React from "react";
 import "./Main.css";
 import Rows from "./Rows";
+import Nav from "./Nav";
 
 export default function Main() {
   return (
     <>
+    <Nav/>
     <div className="main">
       <div className="main__body">
         <div className="main__text">

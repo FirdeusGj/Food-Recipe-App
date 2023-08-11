@@ -1,6 +1,5 @@
 import axios from "axios";
 import React, { useEffect, useState } from "react";
-import requests from "../Requests";
 import "./Row.css";
 import { Link } from "react-router-dom";
 export default function Row({ title, fetchUrl }) {
@@ -10,7 +9,6 @@ export default function Row({ title, fetchUrl }) {
     async function fetchData() {
       const request = await axios.get(fetchUrl);
       setFoods(request.data.meals);
-      console.log(request.data.meals);
       return request;
     }
     fetchData();
@@ -21,11 +19,12 @@ export default function Row({ title, fetchUrl }) {
       <div className="foods">
         <div className="foods-slide">
           {foods.map((food) => (
-            <Link to="/food">
+            <Link to={`/food/${food.idMeal}`}>
             <img
               className="row__img"
               src={food.strMealThumb}
               key={food.idMeal}
+              alt="food"
             />
             </Link>
           ))}
@@ -37,6 +36,7 @@ export default function Row({ title, fetchUrl }) {
                 className="row__img"
                 src={food.strMealThumb}
                 key={food.idMeal}
+                alt="food"
               />
             </Link>
           ))}
