@@ -1,32 +1,11 @@
-/* .foods-slide{
-    animation: 7s slide infinite linear;
-}
-.foods{
-    overflow: hidden;
-    white-space: nowrap;
-    display: flex;
-}
-@keyframes slide {
-    from{
-        transform: translateX(0);
-    }
-    to{ transform: translateX(-100%);}
-}
-.foods-slide img{
-    height: 200px;
-    margin: 0 20px;
-} */
 .row h2{
     color:white;
     font-size: 2rem;
     padding: 10px 0;
 }
-/* .row{
-    background-color: black;
-} */
 .row{
-    border-top: 4px solid transparent; /* Set the initial border width and color */
-    border-image: linear-gradient(to right, white, transparent); /* Set the gradient for the border */
+    border-top: 4px solid transparent;
+    border-image: linear-gradient(to right, white, transparent);
     border-image-slice: 1 1;
 }
 .foods{
@@ -78,4 +57,9 @@
 }
 .row__img:hover{
     transform: scale(1.05);
+}
+.loading{
+    height: 200px;
+    width: 120vw;
+    background-color: gray;
 }

@@ -1,0 +1,124 @@
+
+.foodInfo{
+    color:white;
+    z-index: -1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 120px 0;
+    height: 100%;
+    background-color: #242424;
+}
+.foodInfo__wrapper{
+    border: 2px solid white;
+    border-image: linear-gradient(24deg, white, transparent, white) 1;
+    background-color: #242424;
+    position: relative;
+    padding: 10px;
+    max-width: 1000px;
+    width: 95%;
+    display: flex;
+    align-self: flex-start;
+    justify-content: center;
+    gap: 1rem;
+}
+.foodInfo__img label{
+    position: absolute;
+    background-color: #2424247e;
+    backdrop-filter: blur(5px);
+    padding: 10px 15px;
+    font-size: 20px;
+    font-weight: 600;
+    border-bottom-right-radius: 10px;
+}
+.foodInfo__img img{
+    width: 300px;
+    border-radius: 5px;
+}
+.foodInfo__img{
+    display: flex;
+    flex-direction:column;
+    z-index: 5;
+    align-self: flex-start;
+}
+.foodInfo__text{
+ display: flex;
+ flex-direction: column;
+ justify-content: space-between;
+ height: 100%;
+ gap: 1rem;
+ z-index: 5;
+}
+.foodInfo__text > h1{
+    position: relative;
+    padding-left: 8px;
+}
+.foodInfo__text > h1:before{
+    content: '';
+    position: absolute;
+    height: 100%;
+    width:10px;
+    left:0;
+    background:linear-gradient(to right, white, transparent);
+}
+.foodInfo__ingredients > div{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+}
+.foodInfo__ingredients{
+    gap: 0.5rem;
+    display: flex;
+    flex-direction: column;
+}
+.foodInfo__ingredients p{
+    border-radius: 5px;
+    border:2px solid white;
+    padding: 5px;
+}
+.foodInfo__youtube{
+    text-decoration: none;
+    font-size: 15px;
+    color:white;
+    background-color: red;
+    padding: 10px;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 5px;
+    border-radius: 4px;
+}
+.foodInfo__youtube > svg{
+    fill:white;
+}
+.foodInfo__link{
+    gap: 1rem;
+    margin-top: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between
+}
+.foodInfo__link > :nth-of-type(2),
+.foodInfo__link > :nth-of-type(3){
+    text-decoration: none;
+    color:white;
+    background-color: black;
+    padding: 8px;
+    font-weight: 600;
+    border: 2px solid white;
+    border-radius: 4px;
+}
+.foodInfo__link > :nth-of-type(3){
+    color:black;
+    background-color: white;
+}
+.foodInfo__youtube:hover{
+    background-color: rgb(255, 47, 47);
+}
+.foodInfo__youtube:active{
+    background-color: transparent;
+    padding: 8px;
+    border: 2px solid red;
+}

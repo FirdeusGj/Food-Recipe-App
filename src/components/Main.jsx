@@ -15,7 +15,7 @@ export default function Main() {
           <h5>
             <span className="stroke">Your</span> premier Food Search
             Engine in which you <br/>can discover the recipes you crave,
-            <br/><span className="stroke">Effortlessly</span>.
+            <br/><span className="stroke">Effortlessly</span>
           </h5>
         </div>
       </div>
