@@ -16,7 +16,7 @@
 .logo {
   height: 90px;
   margin:0;
-  filter: drop-shadow(0 0 1px white);
+  filter: drop-shadow(0 0 1px #EEEEEE);
 }
 .stroke:nth-of-type(2){
   font-size: 40px;
@@ -36,15 +36,15 @@
   gap: 1.5rem;
   justify-content: flex-end;
   display: flex;
-  color: white;
+  color: #EEEEEE;
 }
 .link:nth-of-type(2) {
   margin-right: 50px;
 }
 .link {
-  color: white;
+  color: #EEEEEE;
   text-decoration: none;
-  border: 2px solid white;
+  border: 2px solid #EEEEEE;
   padding: 5px 20px;
   border-radius: 4px;
   font-size: 12px;

@@ -1,11 +1,11 @@
 .row h2{
-    color:white;
+    color:#EEEEEE;
     font-size: 2rem;
     padding: 10px 0;
 }
 .row{
     border-top: 4px solid transparent;
-    border-image: linear-gradient(to right, white, transparent);
+    border-image: linear-gradient(to right, #EEEEEE, transparent);
     border-image-slice: 1 1;
 }
 .foods{
@@ -33,7 +33,7 @@
     left: 0;
     width: 10%;
     height: 100%;
-    background: linear-gradient(to left,transparent, black);
+    background: linear-gradient(to left,transparent, #4d1f1d);
     content: '';
     z-index: 2;
 }
@@ -43,7 +43,7 @@
     right: 0;
     width: 10%;
     height: 100%;
-    background: linear-gradient(to right,transparent, black);
+    background: linear-gradient(to right,transparent, #4d1f1d);
     content: '';
     z-index: 2;
 }
@@ -52,14 +52,9 @@
     border-radius: 4px;
     height: 200px;
     margin: 0 10px;
-    box-shadow: 0 0 10px 0 white;
+    box-shadow: 0 0 10px 0 #EEEEEE;
     transition: all 200ms ease-in-out;
 }
 .row__img:hover{
     transform: scale(1.05);
-}
-.loading{
-    height: 200px;
-    width: 120vw;
-    background-color: gray;
 }

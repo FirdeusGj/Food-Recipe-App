@@ -10,7 +10,7 @@ export default function Main() {
     <div className="main">
       <div className="main__body">
         <div className="main__text">
-          <h1>Foodify</h1>
+          <h1 style={{color:"#ffb80e"}}>Foodify</h1>
           <h3>Where every <span className="stroke">bite</span> tells a story.</h3>
           <h5>
             <span className="stroke">Your</span> premier Food Search

@@ -1,6 +1,6 @@
 
 .foodInfo{
-    color:white;
+    color:#EEEEEE;
     z-index: -1;
     display: flex;
     justify-content: center;
@@ -11,9 +11,9 @@
     background-color: #242424;
 }
 .foodInfo__wrapper{
-    border: 2px solid white;
-    border-image: linear-gradient(24deg, white, transparent, white) 1;
-    background-color: #242424;
+    border: 2px solid #EEEEEE;
+    border-image: linear-gradient(22deg, #EEEEEE, transparent, #EEEEEE) 1;
+    background:radial-gradient(#ffb70e4d 50%, black);
     position: relative;
     padding: 10px;
     max-width: 1000px;
@@ -30,13 +30,16 @@
     padding: 10px 15px;
     font-size: 20px;
     font-weight: 600;
+    border-top-left-radius: 4px;
     border-bottom-right-radius: 10px;
 }
 .foodInfo__img img{
     width: 300px;
     border-radius: 5px;
+    z-index: -5;
 }
 .foodInfo__img{
+    filter: drop-shadow(0 0 2px rgb(137, 133, 133));
     display: flex;
     flex-direction:column;
     z-index: 5;
@@ -47,7 +50,7 @@
  flex-direction: column;
  justify-content: space-between;
  height: 100%;
- gap: 1rem;
+ gap: 0.3rem;
  z-index: 5;
 }
 .foodInfo__text > h1{
@@ -60,27 +63,33 @@
     height: 100%;
     width:10px;
     left:0;
-    background:linear-gradient(to right, white, transparent);
+    background:linear-gradient(to right, #EEEEEE, transparent);
 }
 .foodInfo__ingredients > div{
     display: flex;
     flex-wrap: wrap;
-    gap: 0.5rem;
+    gap: 0.3rem;
 }
 .foodInfo__ingredients{
-    gap: 0.5rem;
     display: flex;
     flex-direction: column;
+    border-bottom: 2px solid ;
+    border-top: 2px solid ;
+    border-image: linear-gradient(10deg, #EEEEEE, transparent, #EEEEEE) 1;
+    padding: 10px 0px;
 }
 .foodInfo__ingredients p{
     border-radius: 5px;
-    border:2px solid white;
+    border:2px solid black;
+    background-color: black;
+    color: #EEEEEE;
+    font-weight: 600;
     padding: 5px;
 }
 .foodInfo__youtube{
     text-decoration: none;
     font-size: 15px;
-    color:white;
+    color:#EEEEEE;
     background-color: red;
     padding: 10px;
     font-weight: 600;
@@ -91,7 +100,7 @@
     border-radius: 4px;
 }
 .foodInfo__youtube > svg{
-    fill:white;
+    fill:#EEEEEE;
 }
 .foodInfo__link{
     gap: 1rem;
@@ -103,16 +112,15 @@
 .foodInfo__link > :nth-of-type(2),
 .foodInfo__link > :nth-of-type(3){
     text-decoration: none;
-    color:white;
-    background-color: black;
-    padding: 8px;
+    color:#EEEEEE;
+    background-color: #4d1f1d;
+    padding: 10px;
     font-weight: 600;
-    border: 2px solid white;
     border-radius: 4px;
 }
 .foodInfo__link > :nth-of-type(3){
     color:black;
-    background-color: white;
+    background-color: #EEEEEE;
 }
 .foodInfo__youtube:hover{
     background-color: rgb(255, 47, 47);

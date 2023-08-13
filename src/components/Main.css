@@ -5,26 +5,26 @@
 .main{
     height: 450px;
     width: 100%;
-    background:linear-gradient(black ,transparent 30%,transparent 70%, black) ,url('https://wallpaperaccess.com/full/462778.jpg');
+    background:linear-gradient(#4d1f1d ,transparent 30%,transparent 70%, #4d1f1d) ,url('https://wallpaperaccess.com/full/462778.jpg');
     background-size: cover;
     display: flex;
     align-items: center;
     justify-content: center;
 }
 .main__body{
-    color:white;
+    color:#EEEEEE;
 }
 .stroke{
-    color: black;
+    color: #4d1f1d;
   -webkit-text-fill-color: transparent;
   -webkit-text-stroke-width: 1px;
-  -webkit-text-stroke-color: white;
+  -webkit-text-stroke-color: #EEEEEE;
 }
 .main__text{
     display: flex;
     justify-content:flex-start;
     flex-direction: column;
-    filter: drop-shadow(0 0 1px black);
+    filter: drop-shadow(0 0 1px #4d1f1d);
 }
 .main__text > h1{
     font-size: 50px;

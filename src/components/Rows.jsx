@@ -6,7 +6,7 @@ export default function Rows() {
   return (
     <div className="rows">
       <div className="rows__text">
-        <h1>Browse your favourite category</h1>
+        <h1><span style={{color: '#ffb80e'}}>Browse</span> your favourite category</h1>
       </div>
       <Row title="Beef" fetchUrl={requests.fetchBeef} />
       <Row title="Chicken" fetchUrl={requests.fetchChicken} />
