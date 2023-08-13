@@ -53,3 +53,34 @@
 .link:hover{
   background-color: rgba(255, 255, 255, 0.20);
 }
+@media (max-width:768px) {
+    .nav__link{
+      margin-left: 10px;
+    }
+    .nav__links{
+      gap: 1rem;
+    }
+    .logo{
+      height: 80px;
+    }
+    .link{
+      font-size: 10px;
+    }
+    .link:nth-of-type(2){
+      margin-right: 10px;
+    }
+}
+@media (max-width:521px) {
+  .nav__links{
+    gap: 0.5rem;
+  }
+  .logo{
+    height: 70px;
+  }
+  .link{
+    font-size: 8px;
+  }
+  .link:nth-of-type(2){
+    margin-right: 5px;
+  }
+}

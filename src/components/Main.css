@@ -5,7 +5,7 @@
 .main{
     height: 450px;
     width: 100%;
-    background:linear-gradient(#4d1f1d ,transparent 30%,transparent 70%, #4d1f1d) ,url('https://wallpaperaccess.com/full/462778.jpg');
+    background:linear-gradient(#210d0d ,transparent 30%,transparent 70%, #210d0d) ,url('https://wallpaperaccess.com/full/462778.jpg');
     background-size: cover;
     display: flex;
     align-items: center;
@@ -15,7 +15,7 @@
     color:#EEEEEE;
 }
 .stroke{
-    color: #4d1f1d;
+    color: #210d0d;
   -webkit-text-fill-color: transparent;
   -webkit-text-stroke-width: 1px;
   -webkit-text-stroke-color: #EEEEEE;
@@ -24,7 +24,7 @@
     display: flex;
     justify-content:flex-start;
     flex-direction: column;
-    filter: drop-shadow(0 0 1px #4d1f1d);
+    filter: drop-shadow(0 0 1px #210d0d);
 }
 .main__text > h1{
     font-size: 50px;
@@ -34,4 +34,21 @@
 }
 .main__text > h5 {
     font-size: 18px;
+}
+@media (max-width:768px) {
+    .main__text > h1{
+        font-size: 40px;
+    }
+    .main__text > h3{
+            font-size: 20px;
+    }
+    .main__text > h5{
+        font-size: 15px;
+    }
+    .stroke:nth-of-type(2){
+        font-size: 30px;
+    }
+    .main__text{
+        margin: 0 15px;
+    }
 }
